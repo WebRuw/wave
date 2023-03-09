@@ -54,7 +54,7 @@ body {
   bottom: 0;
   z-index: 50;
   background: #00000079;
-  transition: all .35s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 .overlay--show {
   visibility: visible;
@@ -594,12 +594,11 @@ body {
 
 /* 1250px */
 @media (max-width: 1250px) {
-  .gallery__video img {
-    width: 1000px;
-  }
+  /* global */
   .title {
     font-size: 42px;
   }
+  /* service */
   .service__map iframe {
     width: 1000px;
   }
@@ -607,12 +606,19 @@ body {
   .service__card-price--second::after {
     display: none;
   }
+  /* school */
   .school__column-title {
     line-height: 25px;
   }
-  /* FIXME: */
+  /* gallery */
   .gallery__grid {
     grid-template: repeat(2, auto) / repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  .gallery__grid-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .gallery__categories {
     justify-content: center;
@@ -623,11 +629,14 @@ body {
   .gallery__grid-item:last-child {
     margin-bottom: 0;
   }
+  .gallery__video img {
+    width: 1000px;
+  }
 }
 
 /* 1065px */
 @media (max-width: 1065px) {
-  /* header */
+  /* global */
   .burger {
     display: block;
     position: fixed;
@@ -654,6 +663,10 @@ body {
     border-radius: 4px;
     background: #000000d3;
   }
+  .logo {
+    margin-right: 0;
+  }
+  /* header */
   .header {
     padding-top: 98px;
   }
@@ -677,9 +690,6 @@ body {
   }
   .header__nav-item {
     margin: 0 0 40px 0;
-  }
-  .logo {
-    margin-right: 0;
   }
   /* service */
   .service__cards {
@@ -740,6 +750,7 @@ body {
 
 /* 985px */
 @media (max-width: 985px) {
+  /* blog */
   .blog__slide img {
     width: 1700px;
   }
@@ -750,10 +761,12 @@ body {
     font-size: 30px;
     line-height: 35px;
   }
+  /* service */
   .service__map iframe {
     width: 600px;
     height: 460px;
   }
+  /* gallery */
   .gallery__row-item > span {
     font-size: 36px;
   }
@@ -883,12 +896,14 @@ body {
 
 /* 585px */
 @media (max-width: 585px) {
+  /* gallery */
   .gallery__grid {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
+  /* blog */
   .blog__slide img {
     width: 850px;
     height: 425px;
@@ -905,6 +920,7 @@ body {
 
 /* 450px */
 @media (max-width: 450px) {
+  /* gallery */
   .gallery__video {
     display: none;
   }
@@ -917,6 +933,7 @@ body {
   .gallery__row-item > span:hover {
     font-size: 36px;
   }
+  /* service */
   .service__map iframe {
     width: 320px;
     height: 200px;
